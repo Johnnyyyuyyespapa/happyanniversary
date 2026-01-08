@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8">
+  <title>Para kay Abigiel 🧡</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(to bottom, #ffb347, #ffcc33, #fff1dc);
+      color: #5a2d0c;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* INTRO SCREEN */
+    .intro {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(to bottom, #ff9a3c, #ffb347, #ffe0b2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    .intro h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .intro p {
+      opacity: 0.9;
+    }
+
+    .intro button {
+      background: linear-gradient(45deg, #ff7a18, #ffb347);
+      border: none;
+      padding: 15px 35px;
+      font-size: 1.1em;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      animation: glow 2s infinite;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 10px rgba(255,122,24,0.6); }
+      50% { box-shadow: 0 0 20px rgba(255,179,71,0.9); }
+      100% { box-shadow: 0 0 10px rgba(255,122,24,0.6); }
+    }
+
+    header {
+      padding: 70px 20px 40px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    .sun {
+      font-size: 2.2em;
+      margin-top: 10px;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    .message {
+      max-width: 720px;
+      margin: auto;
+      padding: 30px;
+      font-size: 1.15em;
+      line-height: 1.9;
+      background: rgba(255,255,255,0.45);
+      border-radius: 25px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      padding: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: transform 0.4s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.06);
+    }
+
+    .music {
+      margin: 40px 20px;
+    }
+
+    footer {
+      padding: 40px 20px;
+      font-size: 0.9em;
+      opacity: 0.85;
+    }
+
+    /* FLOATING HEARTS */
+    .floating-heart {
+      position: fixed;
+      bottom: -10px;
+      font-size: 22px;
+      color: rgba(255,122,24,0.7);
+      animation: floatUp 9s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.6);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- INTRO -->
+<div class="intro" id="intro">
+  <h2>Para sa’yo, Mahal 🧡</h2>
+  <p>Isang maliit na sorpresa…</p>
+  <button onclick="startLove()">▶ Play Music</button>
+</div>
+
+<header>
+  <h1>Maligayang 8th Anniversary, Abigiel 🧡</h1>
+  <div class="sun">🌅</div>
+</header>
+
+<section class="message">
+  <p>Mahal kong Abigiel,</p>
+
+  <p>
+    Walong taon na ang lumipas, pero sa bawat paglubog at pagsikat ng araw,
+    ikaw pa rin ang dahilan kung bakit ang ganda ng mundo ko.
+  </p>
+
+  <p>
+    Sa bawat yakap, tawanan, at kahit sa mga pagsubok,
+    natutunan kong ang pag-ibig ay pagpili — at palagi kitang pipiliin.
+  </p>
+
+  <p>
+    Ikaw ang pahinga ko, ang tahanan ko,
+    at ang paborito kong tanawin sa lahat ng oras.
+  </p>
+
+  <p>
+    Hanggang sa lahat ng sunset na sabay nating sasalubungin,
+    ikaw at ikaw pa rin.
+  </p>
+
+  <p>
+    Mahal na mahal kita. Noon. Ngayon. At palagi.
+  </p>
+
+  <p>— Yours always 🧡</p>
+</section>
+
+<section class="gallery">
+  <img src="photo1.jpg">
+  <img src="photo2.jpg">
+  <img src="photo3.jpg">
+  <img src="photo4.jpg">
+</section>
+
+<section class="music">
+  <h2>🎶 Para sa’yo</h2>
+  <p>Tangerine Boulevard – IV of Spades</p>
+
+  <iframe
+    style="border-radius:12px"
+    src="https://open.spotify.com/embed/track/6xqU9H7lJwZ2pLz8oFJfYs?autoplay=1"
+    width="100%" height="80"
+    frameborder="0"
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+  </iframe>
+</section>
+
+<footer>
+  <p>Ginawa nang may pagmamahal at kulay ng sunset 🌅🧡</p>
+</footer>
+
+<script>
+  function startLove() {
+    document.getElementById("intro").style.display = "none";
+    createHearts();
+  }
+
+  function createHearts() {
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "floating-heart";
+      heart.innerHTML = "🧡";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (6 + Math.random() * 5) + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 11000);
+    }, 500);
+  }
+</script>
+
+</body>
+</html>
